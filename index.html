@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ubaid Ullah — AI Researcher & PhD Student</title>
+  <meta name="description" content="AI researcher and PhD student specializing in computer vision, cross‑modal generation, LLMs, and audio processing."/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0d10; --text:#e6e9ef; --muted:#a6adbb; --card:#12151a; --line:#252a34; --brand:#6ae3ff; --brand2:#8b5cf6;
+      --link:#9ae6b4; --chip:#1b2029;
+    }
+    :root.light{
+      --bg:#f8fafc; --text:#0b0d10; --muted:#475569; --card:#ffffff; --line:#e2e8f0; --brand:#007aff; --brand2:#7c3aed;
+      --link:#0ea5e9; --chip:#eef2f7;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1000px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand2));display:grid;place-items:center;color:#001018;font-weight:800}
+    .title h1{font-size:1.35rem;margin:0 0 4px 0}
+    .title p{margin:0;color:var(--muted);font-size:.95rem}
+    .nav{display:flex;gap:16px;flex-wrap:wrap}
+    .chip{background:var(--chip);border:1px solid var(--line);padding:8px 12px;border-radius:999px;color:var(--muted)}
+    .toggle{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:10px;padding:8px 12px;cursor:pointer}
+
+    .hero{margin:28px 0;padding:28px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(106,227,255,.08),transparent);border-radius:16px}
+    .hero h2{margin:0 0 10px 0;font-size:1.6rem;letter-spacing:.2px}
+    .hero p{margin:6px 0;color:var(--muted)}
+    .hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:white;border:none}
+
+    section{margin:28px 0}
+    h3{margin:0 0 12px 0;font-size:1.15rem}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .card{grid-column:span 12;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+    @media(min-width:800px){.card.half{grid-column:span 6}}
+
+    .kvs{display:flex;flex-wrap:wrap;gap:8px}
+    .kvs .k{font-weight:600}
+    .kvs .v{color:var(--muted)}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .tag{padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:var(--chip);color:var(--muted);font-size:.9rem}
+
+    .list{display:grid;gap:10px;margin-top:6px}
+    .list-item{padding:12px;border-radius:12px;border:1px dashed var(--line);background:transparent}
+    .list-item strong{display:block}
+    .meta{color:var(--muted);font-size:.92rem;margin-top:4px}
+
+    footer{margin:40px 0 20px;color:var(--muted);text-align:center}
+  </style>
+  <script>
+    // Light/Dark toggle preference
+    (function(){
+      const pref = localStorage.getItem('theme');
+      if(pref==='light') document.documentElement.classList.add('light');
+    })();
+    function toggleTheme(){
+      const isLight = document.documentElement.classList.toggle('light');
+      localStorage.setItem('theme', isLight? 'light':'dark');
+    }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ubaid Ullah",
+    "jobTitle": "PhD Student, AI Researcher",
+    "affiliation": {"@type":"Organization","name":"Yeungnam University"},
+    "url": "https://yourusername.github.io/",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=YOUR_ID",
+      "https://github.com/yourusername",
+      "https://www.linkedin.com/in/yourhandle/"
+    ],
+    "knowsAbout": ["Computer Vision","Multimodal Learning","LLMs","Audio Processing","Cross-Modal Generation"]
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar">AI</div>
+        <div class="title">
+          <h1>Ubaid Ullah</h1>
+          <p>AI Researcher • Electrical Engineer • PhD Student</p>
+        </div>
+      </div>
+      <div class="nav">
+        <a class="chip" href="#publications">Publications</a>
+        <a class="chip" href="#projects">Projects</a>
+        <a class="chip" href="#experience">Experience</a>
+        <a class="chip" href="#contact">Contact</a>
+        <button class="toggle" onclick="toggleTheme()">🌙/☀️</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h2>Building machines that see, listen, and imagine.</h2>
+      <p>My research lies at the intersection of <strong>computer vision</strong>, <strong>LLMs</strong>, and <strong>cross‑modal content generation</strong> (music → images/video). I design modular, data‑efficient systems that connect perception with language and creativity.</p>
+      <div class="kvs">
+        <div><span class="k">Focus:</span> <span class="v">Multimodal Learning • Vision‑Language • Audio ↔ Image/Video</span></div>
+      </div>
+      <div class="tags">
+        <span class="tag">Diffusion Models</span>
+        <span class="tag">vLLM</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">Deepspeed</span>
+        <span class="tag">CUDA</span>
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn" href="cv.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+        <a class="btn" href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="grid">
+        <div class="card half">
+          <h3>About</h3>
+          <p>I am a PhD student at <strong>Yeungnam University (ICVSLab)</strong>, advised by Prof. Hyun‑Chul Choi. I work on <em>music‑to‑visual story generation</em>, cross‑modal alignment, and evaluation pipelines for multimodal AI.</p>
+        </div>
+        <div class="card half">
+          <h3>Research Interests</h3>
+          <ul class="list">
+            <li class="list-item"><strong>Cross‑Modal Generation</strong><div class="meta">Music → Images/Video; hierarchical segmentation; consistency</div></li>
+            <li class="list-item"><strong>Vision‑Language Models</strong><div class="meta">Instruction‑tuned LLMs, retrieval‑augmented generation</div></li>
+            <li class="list-item"><strong>Audio Intelligence</strong><div class="meta">Emotion/semantics, structure analysis, captioning</div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h3>Selected Publications</h3>
+      <div class="grid">
+        <div class="card">
+          <div class="list">
+            <div class="list-item">
+              <strong>Music‑to‑Visual Story Generation via Multi‑Agent LLM Orchestration</strong>
+              <div class="meta">U. Ullah, <em>et al.</em> | Under review (ICASS P 2026) | <a href="#">arXiv</a> • <a href="#">code</a> • <a href="#">project page</a></div>
+            </div>
+            <div class="list-item">
+              <strong>Modality‑Derived Augmentations for Multimodal FER</strong>
+              <div class="meta">U. Ullah, <em>et al.</em> | In preparation | <a href="#">preprint</a></div>
+            </div>
+            <!-- Add more items as needed -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h3>Projects</h3>
+      <div class="grid">
+        <div class="card half">
+          <strong>MuIm: Music → Image Story</strong>
+          <p>Hierarchical music segmentation + multi‑agent LLM + diffusion for consistent storyboards and video.</p>
+          <div class="meta"><a href="#">Repo</a> • <a href="#">Demo</a></div>
+        </div>
+        <div class="card half">
+          <strong>StoryDiffusion Consistency Toolkit</strong>
+          <p>Attention manipulation utilities for character consistency across batches; plug‑and‑play with SDXL.</p>
+          <div class="meta"><a href="#">Repo</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h3>Experience</h3>
+      <div class="grid">
+        <div class="card">
+          <div class="list">
+            <div class="list-item">
+              <strong>Graduate Researcher — ICVSLab, Yeungnam University</strong>
+              <div class="meta">2021 – Present • Multimodal AI, CV, Audio</div>
+              <div>Built end‑to‑end pipelines for music‑conditioned visual storytelling; optimized training/inference on multi‑GPU (RTX 3090×6) with Deepspeed and vLLM.</div>
+            </div>
+            <div class="list-item">
+              <strong>Collaborations & Teaching</strong>
+              <div class="meta">Mentored juniors; guest lectures on diffusion models & evaluation.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h3>Skills</h3>
+      <div class="grid">
+        <div class="card half">
+          <strong>Frameworks & Stacks</strong>
+          <div class="tags">
+            <span class="tag">PyTorch</span><span class="tag">Transformers</span><span class="tag">Diffusers</span><span class="tag">vLLM</span><span class="tag">Deepspeed</span><span class="tag">Ray</span>
+          </div>
+        </div>
+        <div class="card half">
+          <strong>Domains</strong>
+          <div class="tags">
+            <span class="tag">Computer Vision</span><span class="tag">LLMs</span><span class="tag">Audio Processing</span><span class="tag">Multimodal</span><span class="tag">T2I/T2V</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h3>Contact</h3>
+      <div class="grid">
+        <div class="card">
+          <p>Email: <a href="mailto:youremail@university.ac.kr">youremail@university.ac.kr</a> • GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener">@yourusername</a> • Scholar: <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener">Google Scholar</a></p>
+          <p>Address: 301 Eastern Hill, 682‑13 Gyeyang‑dong, Wonhyo‑ro 28‑gil 44, Gyeongsan‑si, Gyeongsangbuk‑do, Republic of Korea</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Ubaid Ullah — Built with ♥ on GitHub Pages
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
