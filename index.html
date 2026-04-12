@@ -4,83 +4,293 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ubaid Ullah — AI Researcher & PhD Student</title>
-  <meta name="description" content="AI researcher and PhD student specializing in computer vision, cross‑modal generation, LLMs, and audio processing."/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="Ubaid Ullah is an AI researcher and PhD student at Yeungnam University working on computer vision, multimodal learning, cross-modal content generation, ECG diagnosis, and music-to-visual AI systems."
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
   <style>
     :root{
-      --bg:#0b0d10; --text:#e6e9ef; --muted:#a6adbb; --card:#12151a; --line:#252a34; --brand:#6ae3ff; --brand2:#8b5cf6;
-      --link:#9ae6b4; --chip:#1b2029;
+      --bg:#0b0d10;
+      --text:#e6e9ef;
+      --muted:#a6adbb;
+      --card:#12151a;
+      --line:#252a34;
+      --brand:#6ae3ff;
+      --brand2:#8b5cf6;
+      --link:#9ae6b4;
+      --chip:#1b2029;
+      --shadow:0 10px 30px rgba(0,0,0,.18);
     }
     :root.light{
-      --bg:#f8fafc; --text:#0b0d10; --muted:#475569; --card:#ffffff; --line:#e2e8f0; --brand:#007aff; --brand2:#7c3aed;
-      --link:#0ea5e9; --chip:#eef2f7;
+      --bg:#f8fafc;
+      --text:#0b0d10;
+      --muted:#475569;
+      --card:#ffffff;
+      --line:#e2e8f0;
+      --brand:#007aff;
+      --brand2:#7c3aed;
+      --link:#0ea5e9;
+      --chip:#eef2f7;
+      --shadow:0 10px 28px rgba(2,6,23,.08);
     }
+
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.65;
+    }
     a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
-    .wrap{max-width:1000px;margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:14px}
-    .avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand2));display:grid;place-items:center;color:#001018;font-weight:800}
-    .title h1{font-size:1.35rem;margin:0 0 4px 0}
-    .title p{margin:0;color:var(--muted);font-size:.95rem}
-    .nav{display:flex;gap:16px;flex-wrap:wrap}
-    .chip{background:var(--chip);border:1px solid var(--line);padding:8px 12px;border-radius:999px;color:var(--muted)}
-    .toggle{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:10px;padding:8px 12px;cursor:pointer}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .avatar{
+      width:58px;
+      height:58px;
+      border-radius:50%;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      display:grid;
+      place-items:center;
+      color:#001018;
+      font-weight:800;
+      font-size:1rem;
+      box-shadow:var(--shadow);
+    }
+    .title h1{
+      font-size:1.4rem;
+      margin:0 0 4px 0;
+    }
+    .title p{
+      margin:0;
+      color:var(--muted);
+      font-size:.96rem;
+    }
+    .nav{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .chip{
+      background:var(--chip);
+      border:1px solid var(--line);
+      padding:8px 12px;
+      border-radius:999px;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    .toggle{
+      border:1px solid var(--line);
+      background:var(--card);
+      color:var(--text);
+      border-radius:10px;
+      padding:8px 12px;
+      cursor:pointer;
+    }
 
-    .hero{margin:28px 0;padding:28px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(106,227,255,.08),transparent);border-radius:16px}
-    .hero h2{margin:0 0 10px 0;font-size:1.6rem;letter-spacing:.2px}
-    .hero p{margin:6px 0;color:var(--muted)}
-    .hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text)}
-    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:white;border:none}
+    .hero{
+      margin:28px 0;
+      padding:30px;
+      border:1px solid var(--line);
+      background:
+        radial-gradient(circle at top right, rgba(139,92,246,.14), transparent 35%),
+        linear-gradient(180deg, rgba(106,227,255,.08), transparent);
+      border-radius:20px;
+      box-shadow:var(--shadow);
+    }
+    .hero h2{
+      margin:0 0 10px 0;
+      font-size:1.9rem;
+      line-height:1.2;
+      letter-spacing:.2px;
+    }
+    .hero p{
+      margin:8px 0;
+      color:var(--muted);
+      max-width:900px;
+    }
+    .cta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+    .btn{
+      display:inline-block;
+      padding:11px 15px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:var(--card);
+      color:var(--text);
+      font-weight:600;
+    }
+    .btn.primary{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:white;
+      border:none;
+    }
 
-    section{margin:28px 0}
-    h3{margin:0 0 12px 0;font-size:1.15rem}
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
-    .card{grid-column:span 12;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
-    @media(min-width:800px){.card.half{grid-column:span 6}}
+    section{margin:30px 0}
+    h3{
+      margin:0 0 14px 0;
+      font-size:1.18rem;
+      letter-spacing:.1px;
+    }
+    .section-note{
+      color:var(--muted);
+      margin:-4px 0 14px 0;
+    }
 
-    .kvs{display:flex;flex-wrap:wrap;gap:8px}
-    .kvs .k{font-weight:600}
-    .kvs .v{color:var(--muted)}
-    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-    .tag{padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:var(--chip);color:var(--muted);font-size:.9rem}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:16px;
+    }
+    .card{
+      grid-column:span 12;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+    @media(min-width:860px){
+      .card.half{grid-column:span 6}
+      .card.third{grid-column:span 4}
+      .card.twothird{grid-column:span 8}
+    }
 
-    .list{display:grid;gap:10px;margin-top:6px}
-    .list-item{padding:12px;border-radius:12px;border:1px dashed var(--line);background:transparent}
-    .list-item strong{display:block}
-    .meta{color:var(--muted);font-size:.92rem;margin-top:4px}
+    .kvs{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 18px;
+      margin-top:12px;
+    }
+    .kvs span.k{font-weight:700}
+    .kvs span.v{color:var(--muted)}
+    .tags{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .tag{
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:var(--chip);
+      color:var(--muted);
+      font-size:.9rem;
+    }
 
-    footer{margin:40px 0 20px;color:var(--muted);text-align:center}
+    .list{display:grid;gap:12px}
+    .list-item{
+      padding:14px;
+      border-radius:14px;
+      border:1px dashed var(--line);
+      background:transparent;
+    }
+    .list-item strong{
+      display:block;
+      font-size:1rem;
+      margin-bottom:4px;
+    }
+    .meta{
+      color:var(--muted);
+      font-size:.93rem;
+      margin-bottom:6px;
+    }
+
+    ul.clean{
+      margin:10px 0 0 18px;
+      padding:0;
+    }
+    ul.clean li{margin:6px 0}
+
+    .pub-title{
+      font-weight:700;
+      display:block;
+      margin-bottom:4px;
+    }
+    .pub-links{
+      margin-top:6px;
+      color:var(--muted);
+      font-size:.93rem;
+    }
+
+    .contact-line{
+      margin:6px 0;
+    }
+
+    footer{
+      margin:40px 0 20px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    .small{
+      font-size:.94rem;
+      color:var(--muted);
+    }
   </style>
+
   <script>
-    // Light/Dark toggle preference
     (function(){
       const pref = localStorage.getItem('theme');
-      if(pref==='light') document.documentElement.classList.add('light');
+      if(pref === 'light') document.documentElement.classList.add('light');
     })();
     function toggleTheme(){
       const isLight = document.documentElement.classList.toggle('light');
-      localStorage.setItem('theme', isLight? 'light':'dark');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
     }
   </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Ubaid Ullah",
-    "jobTitle": "PhD Student, AI Researcher",
-    "affiliation": {"@type":"Organization","name":"Yeungnam University"},
-    "url": "https://yourusername.github.io/",
+    "jobTitle": "AI Researcher and PhD Student",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Yeungnam University"
+    },
+    "url": "https://uu95.github.io/",
+    "email": "mailto:ubaid95@yu.ac.kr",
     "sameAs": [
-      "https://scholar.google.com/citations?user=YOUR_ID",
-      "https://github.com/yourusername",
-      "https://www.linkedin.com/in/yourhandle/"
+      "https://github.com/uu95",
+      "https://www.linkedin.com/in/ubaid-ullah-75504715b/"
     ],
-    "knowsAbout": ["Computer Vision","Multimodal Learning","LLMs","Audio Processing","Cross-Modal Generation"]
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Computer Vision",
+      "Multimodal Learning",
+      "Cross-Modal Content Generation",
+      "Music-to-Image Generation",
+      "Music-to-Video Generation",
+      "Audio Processing",
+      "ECG Diagnosis",
+      "Large Language Models"
+    ]
   }
   </script>
 </head>
@@ -88,38 +298,60 @@
   <div class="wrap">
     <header>
       <div class="brand">
-        <div class="avatar">AI</div>
+        <div class="avatar">UU</div>
         <div class="title">
           <h1>Ubaid Ullah</h1>
           <p>AI Researcher • Electrical Engineer • PhD Student</p>
         </div>
       </div>
+
       <div class="nav">
+        <a class="chip" href="#about">About</a>
+        <a class="chip" href="#research">Research</a>
         <a class="chip" href="#publications">Publications</a>
-        <a class="chip" href="#projects">Projects</a>
         <a class="chip" href="#experience">Experience</a>
+        <a class="chip" href="#education">Education</a>
         <a class="chip" href="#contact">Contact</a>
-        <button class="toggle" onclick="toggleTheme()">🌙/☀️</button>
+        <button class="toggle" onclick="toggleTheme()">🌙 / ☀️</button>
       </div>
     </header>
 
     <section class="hero">
-      <h2>Building machines that see, listen, and imagine.</h2>
-      <p>My research lies at the intersection of <strong>computer vision</strong>, <strong>LLMs</strong>, and <strong>cross‑modal content generation</strong> (music → images/video). I design modular, data‑efficient systems that connect perception with language and creativity.</p>
+      <h2>Building AI systems that see, listen, and imagine.</h2>
+      <p>
+        I am a PhD student and AI researcher at Yeungnam University, working at the intersection of
+        <strong>computer vision</strong>, <strong>multimodal learning</strong>,
+        <strong>large language models</strong>, and <strong>cross-modal content generation</strong>.
+        My recent work focuses on music-to-image and music-to-video generation, multimodal understanding,
+        efficient AI systems, and ECG diagnosis.
+      </p>
+      <p>
+        I enjoy turning research ideas into practical systems through model design, dataset construction,
+        evaluation pipelines, demos, and full-stack experimentation across software and hardware.
+      </p>
+
       <div class="kvs">
-        <div><span class="k">Focus:</span> <span class="v">Multimodal Learning • Vision‑Language • Audio ↔ Image/Video</span></div>
+        <div><span class="k">Current Role:</span> <span class="v">Researcher, ICVSLab, Yeungnam University</span></div>
+        <div><span class="k">Focus:</span> <span class="v">Computer Vision • Audio • LLMs • Multimodal AI</span></div>
+        <div><span class="k">Website:</span> <span class="v"><a href="https://uu95.github.io/" target="_blank" rel="noopener">uu95.github.io</a></span></div>
       </div>
+
       <div class="tags">
-        <span class="tag">Diffusion Models</span>
-        <span class="tag">vLLM</span>
+        <span class="tag">Computer Vision</span>
+        <span class="tag">Multimodal Learning</span>
+        <span class="tag">Cross-Modal Generation</span>
+        <span class="tag">LLMs</span>
         <span class="tag">PyTorch</span>
-        <span class="tag">Deepspeed</span>
+        <span class="tag">Diffusion Models</span>
         <span class="tag">CUDA</span>
+        <span class="tag">Audio Processing</span>
       </div>
+
       <div class="cta">
         <a class="btn primary" href="#contact">Get in touch</a>
-        <a class="btn" href="cv.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
-        <a class="btn" href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="./Ubaid%20Ullah.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+        <a class="btn" href="https://github.com/uu95" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/ubaid-ullah-75504715b/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </section>
 
@@ -127,50 +359,115 @@
       <div class="grid">
         <div class="card half">
           <h3>About</h3>
-          <p>I am a PhD student at <strong>Yeungnam University (ICVSLab)</strong>, advised by Prof. Hyun‑Chul Choi. I work on <em>music‑to‑visual story generation</em>, cross‑modal alignment, and evaluation pipelines for multimodal AI.</p>
+          <p>
+            I am currently pursuing an integrated M.S./Ph.D. in Electronic Engineering at
+            <strong>Yeungnam University</strong>, Republic of Korea, with research centered on
+            computer vision, deep learning, and music-image cross-modality.
+          </p>
+          <p>
+            With 5+ years of research experience, I have worked on multimodal AI problems spanning
+            image generation, video synthesis, facial expression recognition, ECG diagnosis,
+            efficient deep learning, and cross-modal content generation.
+          </p>
         </div>
+
         <div class="card half">
-          <h3>Research Interests</h3>
-          <ul class="list">
-            <li class="list-item"><strong>Cross‑Modal Generation</strong><div class="meta">Music → Images/Video; hierarchical segmentation; consistency</div></li>
-            <li class="list-item"><strong>Vision‑Language Models</strong><div class="meta">Instruction‑tuned LLMs, retrieval‑augmented generation</div></li>
-            <li class="list-item"><strong>Audio Intelligence</strong><div class="meta">Emotion/semantics, structure analysis, captioning</div></li>
+          <h3>Highlights</h3>
+          <ul class="clean">
+            <li>Developed training-free and resource-efficient music-to-image and music-to-video pipelines.</li>
+            <li>Built multimodal datasets, including around 500K paired audio-visual samples.</li>
+            <li>Worked on efficient AI systems, including models up to 66× smaller.</li>
+            <li>Contributed to papers, demos, web platforms, and research proposal development.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="publications">
-      <h3>Selected Publications</h3>
+    <section id="research">
+      <h3>Research Interests</h3>
       <div class="grid">
-        <div class="card">
-          <div class="list">
-            <div class="list-item">
-              <strong>Music‑to‑Visual Story Generation via Multi‑Agent LLM Orchestration</strong>
-              <div class="meta">U. Ullah, <em>et al.</em> | Under review (ICASS P 2026) | <a href="#">arXiv</a> • <a href="#">code</a> • <a href="#">project page</a></div>
-            </div>
-            <div class="list-item">
-              <strong>Modality‑Derived Augmentations for Multimodal FER</strong>
-              <div class="meta">U. Ullah, <em>et al.</em> | In preparation | <a href="#">preprint</a></div>
-            </div>
-            <!-- Add more items as needed -->
-          </div>
+        <div class="card third">
+          <strong>Cross-Modal Generation</strong>
+          <p class="small">
+            Music-to-image, music-to-video, and long-context visual storytelling with modular and efficient pipelines.
+          </p>
+        </div>
+        <div class="card third">
+          <strong>Vision, Audio, and Language</strong>
+          <p class="small">
+            Multimodal reasoning, audio analysis, semantic tagging, expressive captioning, and LLM-driven generation.
+          </p>
+        </div>
+        <div class="card third">
+          <strong>Efficient AI for Real Use</strong>
+          <p class="small">
+            Compact models, evaluation tools, deployment-aware design, and performance-oriented AI systems.
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="projects">
-      <h3>Projects</h3>
+    <section id="publications">
+      <h3>Publications</h3>
+      <p class="section-note">Selected journal, conference, under-review, and in-preparation works.</p>
+
       <div class="grid">
-        <div class="card half">
-          <strong>MuIm: Music → Image Story</strong>
-          <p>Hierarchical music segmentation + multi‑agent LLM + diffusion for consistent storyboards and video.</p>
-          <div class="meta"><a href="#">Repo</a> • <a href="#">Demo</a></div>
-        </div>
-        <div class="card half">
-          <strong>StoryDiffusion Consistency Toolkit</strong>
-          <p>Attention manipulation utilities for character consistency across batches; plug‑and‑play with SDXL.</p>
-          <div class="meta"><a href="#">Repo</a></div>
+        <div class="card">
+          <div class="list">
+            <div class="list-item">
+              <span class="pub-title">IoT-enabled computer vision-based parts inspection system for SME 4.0</span>
+              <div class="meta">First Author • Microprocessors and Microsystems (Elsevier) • 2021</div>
+              <div>U. Ullah, F. A. Bhatti, A. R. Maud, M. I. Asim, K. Khurshid, M. Maqsood.</div>
+            </div>
+
+            <div class="list-item">
+              <span class="pub-title">A review of multi-modal learning from the text-guided visual processing viewpoint</span>
+              <div class="meta">First Author • Sensors (MDPI) • 2022</div>
+              <div>U. Ullah, J. S. Lee, C. H. An, H. Lee, S. Y. Park, R. H. Baek, H. C. Choi.</div>
+            </div>
+
+            <div class="list-item">
+              <span class="pub-title">MuIm: Analyzing Music–Image Correlations from an Artistic Perspective</span>
+              <div class="meta">First Author • Applied Sciences (MDPI) • 2024</div>
+              <div>U. Ullah, H. C. Choi.</div>
+            </div>
+
+            <div class="list-item">
+              <span class="pub-title">Enhancing Multimodal Facial Expression Recognition with Derived Modality Transformations Using Novel Convolutional Neural Network-Based Models</span>
+              <div class="meta">Co-First Author • IEEE Access • 2026</div>
+              <div>M. T. Naseem, U. Ullah, C. S. Lee.</div>
+            </div>
+
+            <div class="list-item">
+              <span class="pub-title">Efficient Coarse-to-Fine Learning for Sparse Long-Tailed Multi-Label ECG Classification</span>
+              <div class="meta">First Author • IEEE Journal of Biomedical and Health Informatics • Under Review • 2026</div>
+              <div>U. Ullah, M. T. Naseem, I. Khan, H. C. Choi.</div>
+            </div>
+
+            <div class="list-item">
+              <span class="pub-title">Music Artistic Captioning: Towards Translating Music into Expressive Language</span>
+              <div class="meta">First Author • Interspeech • Under Review • 2026</div>
+              <div>U. Ullah, H. C. Choi, Z. Bouraoui.</div>
+            </div>
+
+            <div class="list-item">
+              <span class="pub-title">Story of Music: Translating Music into Long-Context Visual Stories</span>
+              <div class="meta">First Author • Manuscript in Preparation • 2026</div>
+              <div>U. Ullah, H. C. Choi, Z. Bouraoui.</div>
+            </div>
+
+            <div class="list-item">
+              <span class="pub-title">A brief survey of text-driven image generation and manipulation</span>
+              <div class="meta">Co-Author • IEEE ICCE-Asia Conference • 2021</div>
+              <div>H. Lee, U. Ullah, J. S. Lee, B. Jeong, H. C. Choi.</div>
+            </div>
+
+            <div class="list-item">
+              <span class="pub-title">Real-time Compact Video Super-resolution for Video Conferencing</span>
+              <div class="meta">First Author • KIEE Conference Proceedings • 2022</div>
+              <div>U. Ubaid, H. C. Choi.</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -181,15 +478,120 @@
         <div class="card">
           <div class="list">
             <div class="list-item">
-              <strong>Graduate Researcher — ICVSLab, Yeungnam University</strong>
-              <div class="meta">2021 – Present • Multimodal AI, CV, Audio</div>
-              <div>Built end‑to‑end pipelines for music‑conditioned visual storytelling; optimized training/inference on multi‑GPU (RTX 3090×6) with Deepspeed and vLLM.</div>
+              <strong>Researcher — Intelligent Computer Vision Software Lab (ICVSLab), Yeungnam University</strong>
+              <div class="meta">Gyeongsan, South Korea • Mar. 2021 – Present</div>
+              <ul class="clean">
+                <li>Conduct advanced research across computer vision, audio, LLMs, and multimodal AI.</li>
+                <li>Developed models and systems for image generation, video synthesis, and ECG diagnosis.</li>
+                <li>Built training-free and resource-efficient pipelines for music-to-image and music-to-video generation.</li>
+                <li>Improved generation quality through modules for emotion analysis, structure understanding, and semantic tagging.</li>
+                <li>Built and curated multimodal datasets, including around 500K paired audio-visual samples.</li>
+                <li>Developed software tools, demos, and web platforms to accelerate evaluation and deployment.</li>
+                <li>Supported undergraduate teaching through lab instruction, examinations, and mentoring.</li>
+              </ul>
             </div>
+
             <div class="list-item">
-              <strong>Collaborations & Teaching</strong>
-              <div class="meta">Mentored juniors; guest lectures on diffusion models & evaluation.</div>
+              <strong>Research Assistant — Institute of Space Technology (IST)</strong>
+              <div class="meta">Islamabad, Pakistan • May 2019 – Nov. 2019</div>
+              <ul class="clean">
+                <li>Developed a high-precision parts inspection system with error as low as 0.1 mm.</li>
+                <li>Integrated hardware and software using practical computer vision algorithms.</li>
+                <li>Designed CPU-friendly processing suitable for edge-device deployment.</li>
+                <li>Validated the system across diverse parts and test conditions and produced SCIE-indexed output.</li>
+              </ul>
+            </div>
+
+            <div class="list-item">
+              <strong>Intern — Rapidev IoT Solutions</strong>
+              <div class="meta">Islamabad, Pakistan • Sep. 2018 – Nov. 2018</div>
+              <ul class="clean">
+                <li>Created tutorial videos for IoT educational kits to improve onboarding and accessibility.</li>
+                <li>Supported client relationships, implementation, and troubleshooting for better product adoption.</li>
+              </ul>
+            </div>
+
+            <div class="list-item">
+              <strong>Intern — 503 Aviation Base Workshop EME</strong>
+              <div class="meta">Rawalpindi, Pakistan • Jul. 2016 – Sep. 2016</div>
+              <ul class="clean">
+                <li>Worked on small-scale engineering ideas related to aviation operations efficiency and safety.</li>
+                <li>Gained practical exposure to workshop operations, technical processes, and early-stage design work.</li>
+              </ul>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h3>Education</h3>
+      <div class="grid">
+        <div class="card half">
+          <strong>Yeungnam University</strong>
+          <div class="meta">Gyeongsan, Republic of Korea</div>
+          <p><strong>M.S./Ph.D. in Electronic Engineering (In Progress)</strong></p>
+          <p class="small">Mar. 2020 – Present • GPA: 4.38 / 4.50</p>
+          <p class="small">Research focus: Computer Vision, Deep Learning, and Music–Image Cross-Modality.</p>
+        </div>
+
+        <div class="card half">
+          <strong>Foundation University, Islamabad</strong>
+          <div class="meta">Islamabad, Pakistan</div>
+          <p><strong>B.Sc. in Electrical Engineering</strong></p>
+          <p class="small">Sep. 2014 – Nov. 2018 • GPA: 3.83 / 4.00</p>
+          <p class="small">Specialization in Machine Learning and Signal Processing. Coursework included Robotics, DSP, and Control Systems.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards">
+      <h3>Honors & Awards</h3>
+      <div class="grid">
+        <div class="card half">
+          <strong>Full Scholarship</strong>
+          <div class="meta">Ph.D. Studies at Yeungnam University • South Korea</div>
+        </div>
+        <div class="card half">
+          <strong>Gold Medal</strong>
+          <div class="meta">Bachelor’s Degree • Pakistan</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="extra">
+      <h3>Additional Experience</h3>
+      <div class="grid">
+        <div class="card half">
+          <strong>Server, Workstation, and Full-PC Setup & Configuration</strong>
+          <ul class="clean">
+            <li>Hands-on experience in full-PC and server setup, hardware integration, and multi-GPU configuration.</li>
+            <li>Worked on system installation, troubleshooting, deployment, and performance-oriented environment management.</li>
+          </ul>
+        </div>
+
+        <div class="card half">
+          <strong>Automation and IT Development for Premises and Facilities</strong>
+          <ul class="clean">
+            <li>Worked on automation-oriented IT development for homes and facilities.</li>
+            <li>Applied engineering problem-solving to improve technical usability, reliability, and operational efficiency.</li>
+          </ul>
+        </div>
+
+        <div class="card half">
+          <strong>Experience with Top International Research Venues</strong>
+          <ul class="clean">
+            <li>Gained exposure to publication, presentation, and review standards of venues such as CVPR, ICLR, and NeurIPS.</li>
+            <li>Built familiarity with high-impact academic communication and evolving AI research trends.</li>
+          </ul>
+        </div>
+
+        <div class="card half">
+          <strong>Domestic and International Interdisciplinary Collaboration</strong>
+          <ul class="clean">
+            <li>Collaborated with domestic research groups in South Korea, including work with art and music departments.</li>
+            <li>Participated in international academic collaboration with researchers in France.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -198,15 +600,30 @@
       <h3>Skills</h3>
       <div class="grid">
         <div class="card half">
-          <strong>Frameworks & Stacks</strong>
+          <strong>Technical Areas</strong>
           <div class="tags">
-            <span class="tag">PyTorch</span><span class="tag">Transformers</span><span class="tag">Diffusers</span><span class="tag">vLLM</span><span class="tag">Deepspeed</span><span class="tag">Ray</span>
+            <span class="tag">Artificial Intelligence</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Multimodal Learning</span>
+            <span class="tag">Audio Processing</span>
+            <span class="tag">Cross-Modal Generation</span>
+            <span class="tag">ECG Diagnosis</span>
+            <span class="tag">LLMs</span>
           </div>
         </div>
+
         <div class="card half">
-          <strong>Domains</strong>
+          <strong>Tools & Workflow</strong>
           <div class="tags">
-            <span class="tag">Computer Vision</span><span class="tag">LLMs</span><span class="tag">Audio Processing</span><span class="tag">Multimodal</span><span class="tag">T2I/T2V</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">Python</span>
+            <span class="tag">CUDA</span>
+            <span class="tag">Diffusion Models</span>
+            <span class="tag">GitHub Pages</span>
+            <span class="tag">Research Demos</span>
+            <span class="tag">Dataset Curation</span>
+            <span class="tag">Evaluation Pipelines</span>
           </div>
         </div>
       </div>
@@ -216,16 +633,23 @@
       <h3>Contact</h3>
       <div class="grid">
         <div class="card">
-          <p>Email: <a href="mailto:youremail@university.ac.kr">youremail@university.ac.kr</a> • GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener">@yourusername</a> • Scholar: <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener">Google Scholar</a></p>
-          <p>Address: 301 Eastern Hill, 682‑13 Gyeyang‑dong, Wonhyo‑ro 28‑gil 44, Gyeongsan‑si, Gyeongsangbuk‑do, Republic of Korea</p>
+          <p class="contact-line"><strong>Email:</strong> <a href="mailto:ubaid95@yu.ac.kr">ubaid95@yu.ac.kr</a></p>
+          <p class="contact-line"><strong>Website:</strong> <a href="https://uu95.github.io/" target="_blank" rel="noopener">uu95.github.io</a></p>
+          <p class="contact-line"><strong>GitHub:</strong> <a href="https://github.com/uu95" target="_blank" rel="noopener">github.com/uu95</a></p>
+          <p class="contact-line"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ubaid-ullah-75504715b/" target="_blank" rel="noopener">linkedin.com/in/ubaid-ullah-75504715b</a></p>
+          <p class="contact-line"><strong>Phone:</strong> <a href="tel:+821059291995">(+82) 10-5929-1995</a></p>
+          <p class="contact-line"><strong>Address:</strong> 301 Eastern Hill, 682-13 Gyeyang-dong, Wonhyo-ro 28-gil 44, Gyeongsan-si, Gyeongsangbuk-do, Republic of Korea</p>
         </div>
       </div>
     </section>
 
     <footer>
-      © <span id="y"></span> Ubaid Ullah — Built with ♥ on GitHub Pages
+      © <span id="y"></span> Ubaid Ullah — Built with GitHub Pages
     </footer>
   </div>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
